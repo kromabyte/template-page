@@ -1,0 +1,41 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+
+const menuItems = [
+  { title: "Nosotros", path: "/#nosotros" },
+  { title: "Catalogo", path: "/#Catalogo" },
+  { title: "Contacto", path: "/#contacto" },
+];
+---
+
+<header class="flex flex-col items-center justify-between px-6 py-5 shadow-md lg:flex-row lg:px-10">
+  <Astronav>
+    <div class="flex w-full items-center justify-between lg:w-auto">
+      <a href="/" class="text-xl font-bold text-slate-800">Altos del Coliboro</a>
+      <div class="block lg:hidden">
+        <MenuIcon class="h-7 w-7 text-gray-800" />
+      </div>
+    </div>
+
+    <MenuItems class="mt-3 hidden w-full lg:mt-0 lg:flex lg:w-auto">
+      <ul class="flex flex-col gap-3 lg:flex-row lg:items-center">
+        {menuItems.map((item) => (
+          <li>
+            <a href={item.path} class="flex py-2 text-gray-600 hover:text-gray-900 lg:px-3">
+              {item.title}
+            </a>
+          </li>
+        ))}
+      </ul>
+        <a href="/#cta"class="mt-3 inline-block rounded-md bg-black px-4 py-2 text-center text-sm font-semibold text-white lg:hidden">
+            Empezar
+        </a>
+    </MenuItems>
+  </Astronav>
+
+  <div class="hidden lg:block">
+    <a href="/#cta" class="rounded-md bg-black px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800">
+      Empezar
+    </a>
+  </div>
+</header>
