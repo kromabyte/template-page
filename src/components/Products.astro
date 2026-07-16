@@ -1,33 +1,39 @@
 ---
 interface Product {
   name: string;
-  price: string;
+  format: string;
+  netPrice: string;
+  totalPrice: string;
   image: string;
 }
 
 const products: Product[] = [
-  { name: "Papas", price: "$1.990 kg", image: "/papas.jpeg" },
-  { name: "Betarraga", price: "$1.490 kg", image: "/beta.jpg" },
-  { name: "cilantro", price: "$1.290 kg", image: "/cilantro.jpg" },
-  { name: "pepinos", price: "$990 kg", image: "/pepinos.jpg" },
+  { name: "Papas Lavada Calibrada", format: "Malla 5.0 kg", netPrice: "$2.450", totalPrice: "$2.916", image: "/papas.jpeg" },
+  { name: "Beterraga con Piel", format: "Malla 1.0 kg", netPrice: "$950", totalPrice: "$1.131", image: "/beta.jpg" },
+  { name: "Cilantro Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$600", totalPrice: "$714", image: "/cilantro.jpg" },
+  { name: "Zanahoria sin Cáscara", format: "Bolsa 1.0 kg", netPrice: "$900", totalPrice: "$1.071", image: "/pepinos.jpg" },
 ];
 ---
 
 <section class="px-6 py-16 md:px-10">
-    <h2 class="text-center text-3xl font-bold sm:text-4xl mb-20">Productos Destacados</h2>
-    
-  <div class="grid grid-cols-2 gap-6 sm:gap-8 sm:grid-cols-2 lg:grid-cols-4">
+  <h2 class="mb-20 text-center text-3xl font-bold sm:text-4xl">Productos Destacados</h2>
+
+  <div class="grid grid-cols-2 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
     {products.map((product) => (
       <div class="flex flex-col">
-        <div class="rounded-nonex shadow-md">
+        <div class="rounded-lg shadow-md">
           <img
             src={product.image}
             alt={product.name}
-            class="aspect-square w-full rounded-none object-cover"
+            class="aspect-square w-full rounded-lg object-cover"
           />
         </div>
-        <p class="mt-3 text-sm text-slate-600">{product.name}</p>
-        <p class="mt-1 font-semibold">{product.price}</p>
+        <p class="mt-3 text-sm font-medium text-slate-700">{product.name}</p>
+        <p class="text-xs text-slate-500">{product.format}</p>
+        <p class="mt-1 text-sm font-semibold text-slate-800">
+          {product.totalPrice} <span class="text-xs font-normal text-slate-400">c/IVA</span>
+        </p>
+        <p class="text-xs text-slate-400">Neto: {product.netPrice}</p>
       </div>
     ))}
   </div>
