@@ -1,0 +1,40 @@
+---
+interface Product {
+  name: string;
+  price: string;
+  image: string;
+}
+
+const products: Product[] = [
+  { name: "Papas", price: "$1.990", image: "/images/products/papas.jpg" },
+  { name: "Betarraga", price: "$1.490", image: "/images/products/betarraga.jpg" },
+  { name: "Zanahoria", price: "$1.290", image: "/images/products/zanahoria.jpg" },
+  { name: "Cebolla", price: "$990", image: "/images/products/cebolla.jpg" },
+  { name: "Apio", price: "$890", image: "/images/products/apio.jpg" },
+  { name: "Lechuga", price: "$1.190", image: "/images/products/lechuga.jpg" },
+  { name: "Tomate", price: "$1.590", image: "/images/products/tomate.jpg" },
+  { name: "Pepino", price: "$990", image: "/images/products/pepino.jpg" },
+  { name: "Pimentón", price: "$1.390", image: "/images/products/pimenton.jpg" },
+  { name: "Ajo", price: "$690", image: "/images/products/ajo.jpg" },
+];
+---
+
+<section class="px-6 py-16 md:px-10">
+  <h1 class="text-center text-3xl font-bold sm:text-4xl">Catálogo</h1>
+
+  <div class="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
+    {products.map((product) => (
+      <div class="flex flex-col">
+        <div class="rounded-lg shadow-md">
+          <img
+            src={product.image}
+            alt={product.name}
+            class="aspect-square w-full rounded-lg object-cover"
+          />
+        </div>
+        <p class="mt-3 text-sm text-slate-600">{product.name}</p>
+        <p class="mt-1 font-semibold">{product.price}</p>
+      </div>
+    ))}
+  </div>
+</section>
