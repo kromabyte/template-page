@@ -1,0 +1,48 @@
+---
+interface TeamMember {
+  name: string;
+  role: string;
+  avatar: string;
+}
+
+const teamMembers: TeamMember[] = [
+  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member1.jpg" },
+  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member2.jpg" },
+  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member3.jpg" },
+];
+---
+
+<section class="mx-auto max-w-4xl px-6 py-16 md:px-10">
+  <h1 class="text-3xl font-bold sm:text-4xl">Sobre nosotros</h1>
+  <p class="mt-3 text-lg text-slate-500">Somos un equipo pequeño y apasionado.</p>
+
+  <div class="mt-12 flex flex-col gap-3">
+    <h2 class="text-2xl font-bold text-gray-800 sm:text-3xl">
+      Impulsando el mundo con Astro.
+    </h2>
+    <p class="text-lg leading-relaxed text-slate-500">
+      Somos un equipo multicultural de distintas partes del mundo. Venimos de
+      trasfondos diversos, aportando personalidades, experiencias y
+      habilidades distintas al trabajo. Esto es lo que hace especial a
+      nuestro equipo.
+    </p>
+  </div>
+
+  <div class="mt-12 grid gap-10 sm:grid-cols-2 md:grid-cols-3">
+    {teamMembers.map((member) => (
+      <div class="group">
+        <div class="aspect-square w-full overflow-hidden rounded-md bg-gray-100">
+          <img
+            src={member.avatar}
+            alt={member.name}
+            class="h-full w-full object-cover transition group-hover:-translate-y-1 group-hover:shadow-xl"
+          />
+        </div>
+        <div class="mt-4 text-center">
+          <h3 class="text-lg text-gray-800">{member.name}</h3>
+          <p class="text-sm text-slate-500">{member.role}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>

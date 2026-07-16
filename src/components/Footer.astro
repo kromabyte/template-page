@@ -27,7 +27,7 @@ const legalLinks: FooterLink[] = [
 const socialLinks: SocialLink[] = [
   { name: "Instagram", slug: "instagram", href: "https://instagram.com" },
   { name: "X (Twitter)", slug: "x", href: "https://x.com" },
-  { name: "LinkedIn", slug: "linkedin", href: "https://linkedin.com" },
+  { name: "Tiktok", slug: "Tiktok", href: "https://www.tiktok.com" },
   { name: "Facebook", slug: "facebook", href: "https://facebook.com" },
 ];
 ---
@@ -35,8 +35,9 @@ const socialLinks: SocialLink[] = [
 <footer class="bg-zinc-900 px-6 py-12 text-slate-300 md:px-10">
   <div class="mx-auto grid max-w-6xl gap-10 md:grid-cols-4">
     <div>
-      <Image src={logoSrc} alt="Logo" width={60} height={60} />
-      <p class="mt-3 text-sm text-slate-400">
+        <h3 class="mb-3 text-sm font-semibold uppercase tracking-wide text-white">Altos del Caliboro</h3>
+        <!-- <Image src={logoSrc} alt="Logo" width={60} height={60} /> -->
+        <p class="mt-3 text-sm text-slate-400">
         Av. Providencia 1234, Of. 501<br />
         Santiago, Chile
       </p>
@@ -86,7 +87,7 @@ const socialLinks: SocialLink[] = [
 
   <div class="bottom-px" >
     <p class="text-center text-sm text-slate-500">
-      Copyright © {new Date().getFullYear()} Kromacoin. All rights reserved.
+      Copyright © {new Date().getFullYear()}. All rights reserved.
     </p>
 
     <p class="text-center text-xs text-slate-500 mt-1">
@@ -95,7 +96,7 @@ const socialLinks: SocialLink[] = [
         target="_blank"
         rel="noopener"
         class="hover:underline">
-        kromabyte.
+        KromaByte.
       </a>
     </p>
   </div>

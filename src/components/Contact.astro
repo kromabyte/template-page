@@ -1,0 +1,47 @@
+---
+import ContactForm from "./contactform.astro";
+
+interface ContactInfo {
+  icon: string;
+  label: string;
+  href?: string;
+}
+
+const contactInfo: ContactInfo[] = [
+  { icon: "uil:map-marker", label: "Av. Providencia 1234, Santiago, Chile" },
+  { icon: "uil:envelope", label: "contacto@tuempresa.com", href: "mailto:contacto@tuempresa.com" },
+  { icon: "uil:phone", label: "+56 9 1234 5678", href: "tel:+56912345678" },
+];
+---
+
+<section class="mx-auto max-w-4xl px-6 py-16 md:px-10">
+  <h1 class="text-3xl  font-bold sm:text-4xl text-center">Contacto</h1>
+  <p class="mt-3 text-lg text-slate-500 text-center">Estamos aquí para ayudarte.</p>
+
+  <div class="mt-10 grid gap-10 md:grid-cols-2">
+    <div>
+      <h2 class="text-2xl font-medium text-gray-800">Escríbenos</h2>
+      <p class="mt-3 leading-relaxed text-slate-500">
+        ¿Tienes alguna consulta? Completa el formulario o contáctanos directamente.
+      </p>
+
+      <div class="mt-5 space-y-3">
+        {contactInfo.map((item) => {
+          const [prefix, name] = item.icon.split(":");
+          return (
+            <div class="flex items-center gap-2 text-gray-600">
+              <img src={`https://api.iconify.design/${prefix}/${name}.svg`} alt="" class="h-4 w-4" />
+              {item.href ? (
+                <a href={item.href} class="hover:underline">{item.label}</a>
+              ) : (
+                <span>{item.label}</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    <ContactForm />
+  </div>
+</section>
