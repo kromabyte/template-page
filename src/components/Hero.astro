@@ -11,7 +11,7 @@ const {
     title = "Hortalizas seleccionadas y calibradas para tu cocina.",
     description = "",
     backgroundImages = ["/hero-2.jpg","/hero-5.jpg","/hero.png","/hero-6.jpg"],
-    ctaText = "Catalogo",
+    ctaText = "Catálogo",
     ctaHref = "/catalog",
 } = Astro.props;
 ---
@@ -32,7 +32,7 @@ const {
         <p class="mt-4 text-base text-slate-200 sm:text-lg md:text-xl">
             {description}
         </p>
-        <a href={ctaHref} class="mt-8 inline-flex items-center gap-1 rounded-md bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-400 sm:text-base">
+        <a href={ctaHref} class="mt-8 inline-flex items-center gap-1 rounded-md bg-black px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-600 sm:text-base">
             <img src="https://api.iconify.design/healthicons/vegetables.svg?color=%23ffffff" alt="" class="h-8 w-8" />
             {ctaText}
        </a>

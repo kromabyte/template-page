@@ -1,0 +1,46 @@
+---
+interface GalleryImage {
+  src: string;
+  alt: string;
+}
+
+const images: GalleryImage[] = [
+  { src: "/hero-2.jpg", alt: "Campo de cultivo" },
+  { src: "/hero-5.jpg", alt: "Cosecha de papas" },
+  { src: "/hero.png", alt: "Verduras frescas seleccionadas" },
+  { src: "/hero-6.jpg", alt: "Proceso de empaque" },
+  { src: "/hero-6.jpg", alt: "Producto listo para despacho" },
+];
+---
+
+<section class="px-6 pb-10 md:px-10">
+  <h2 class="mb-10 text-center text-3xl font-bold sm:text-4xl">Nuestro Trabajo</h2>
+
+  <div class="mx-auto grid max-w-6xl grid-cols-2 gap-3 sm:gap-4 md:grid-cols-4 md:auto-rows-45">
+    <img
+      src={images[0].src}
+      alt={images[0].alt}
+      class="col-span-2 aspect-4/3 w-full rounded-xs object-cover shadow-md md:col-span-2 md:row-span-2 md:aspect-auto md:h-full"
+    />
+    <img
+      src={images[1].src}
+      alt={images[1].alt}
+      class="aspect-square w-full rounded-xs object-cover shadow-md md:aspect-auto md:h-full"
+    />
+    <img
+      src={images[2].src}
+      alt={images[2].alt}
+      class="aspect-square w-full rounded-xs object-cover shadow-md md:aspect-auto md:h-full"
+    />
+    <img
+      src={images[3].src}
+      alt={images[3].alt}
+      class="aspect-square w-full rounded-xs object-cover shadow-md md:aspect-auto md:h-full"
+    />
+    <img
+      src={images[4].src}
+      alt={images[4].alt}
+      class="aspect-square w-full rounded-xs object-cover shadow-md md:aspect-auto md:h-full"
+    />
+  </div>
+</section>
