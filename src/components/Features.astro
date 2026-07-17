@@ -10,31 +10,31 @@ const features: Feature[] = [
     title: "Confianza para tu negocio.",
     description:
       "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML",
-    icon: "noto:handshake-medium-skin-tone-light-skin-tone",
+    icon: "fa6-solid:handshake",
   },
   {
     title: "Entregas a tu cocina.",
     description:
       "Astro renders your entire page to static HTML, removing all JavaScript from your final build ",
-    icon: "streamline-emojis:delivery-truck",
+    icon: "mdi:delivery-dining",
   },
   {
     title: "Productos de calidad.",
     description:
       "Need some JS? Astro can automatically hydrate interactive components when",
-    icon: "streamline-ultimate-color:award-ribbon-star-1",
+    icon: "healthicons:agriculture",
   },
 ];
 ---
 
-<div class="px-10">
+<div class="px-2 ">
 
-  <div class="mt-16 grid gap-16 sm:grid-cols-2 md:grid-cols-3 ">
+  <div class="mt-10 grid grid-cols-3 gap-3 sm:gap-8 md:gap-16">
     {features.map((item) => {
       const [prefix, name] = item.icon.split(":");
       return (
-        <div class="flex items-start gap-4">
-          <div class="mt-3 h-15 w-15 shrink-0 rounded-full bg-black p-2.5">
+        <div class="flex flex-col items-center gap- text-center sm:flex-row sm:items-start sm:gap-4 sm:text-left">
+          <div class="h-13 w-13 shrink-0 rounded-full bg-black p-1.5 sm:mt-1 sm:h-15 sm:w-15 sm:p-2.5">
             <img
               src={`https://api.iconify.design/${prefix}/${name}.svg?color=%23ffffff`}
               alt=""
@@ -42,8 +42,8 @@ const features: Feature[] = [
             />
           </div>
           <div>
-            <h3 class="text-xl font-size-lg font-semibold">{item.title}</h3>
-            <p class="mt-2 leading-relaxed text-slate-500">{item.description}</p>
+            <h3 class="text-sm mt-2 font-semibold sm:text-xl">{item.title}</h3>
+            <p class="mt-1 text-xs leading-snug text-slate-500 sm:mt-2 sm:text-base sm:leading-relaxed">{item.description}</p>
           </div>
         </div>
       );
