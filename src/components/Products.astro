@@ -8,15 +8,15 @@ interface Product {
 }
 
 const products: Product[] = [
-  { name: "Papas Lavada Calibrada", format: "Malla 5.0 kg", netPrice: "$2.450", totalPrice: "$2.916", image: "/papas.jpeg" },
-  { name: "Beterraga con Piel", format: "Malla 1.0 kg", netPrice: "$950", totalPrice: "$1.131", image: "/beta.jpg" },
-  { name: "Cilantro Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$600", totalPrice: "$714", image: "/cilantro.jpg" },
-  { name: "Zanahoria sin Cáscara", format: "Bolsa 1.0 kg", netPrice: "$900", totalPrice: "$1.071", image: "/pepinos.jpg" },
+  { name: "Papas Pelada Bastón (Al vacío)", format: "bolsa 1.0 kg", netPrice: "$1.220", totalPrice: "$1.456", image: "/products/papas/papa-baston.jpg" },
+  { name: "Zanahoria Corte Bastón (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$900", totalPrice: "$1.071", image: "/products/zanahorias/zana-03.jpg" },
+  { name: "Limón en Malla", format: "Malla 10 kg", netPrice: "$8.000", totalPrice: "$9.520", image: "/products/citricos/limon.jpg" },
+  { name: "Beterraga Pelada Picada (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.500", totalPrice: "$1.785", image: "/products/betarragas/betarraga-03.jpg" },
 ];
 ---
 
 <section class="px-6  pt-8 md:px-10">
-  <h2 class="bg-linear-to-r from-black via-green-700 via-60% to-green-500 mb-10 text-center text-3xl font-bold sm:text-4xl bg-clip-text text-transparent">Productos Destacados</h2>
+  <h2 class="bg-linear-to-r from-black via-green-700 via-60% to-green-500 mb-10 text-center  text-3xl font-bold sm:text-4xl bg-clip-text text-transparent">Productos Destacados</h2>
 
   <div class="grid grid-cols-2 gap-6 sm:grid-cols-2 sm:gap-8 lg:grid-cols-4">
     {products.map((product) => (

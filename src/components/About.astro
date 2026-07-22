@@ -12,13 +12,22 @@ const teamMembers: TeamMember[] = [
 ];
 ---
 
-<section class="mx-auto mb-20 max-w-4xl px-6 pt-8 md:px-10">
-  <h1 class="text-3xl font-bold sm:text-4xl">Sobre nosotros</h1>
-  <p class="mt-3 text-lg text-slate-500">Somos un equipo pequeño y apasionado.</p>
+<div
+  class="relative flex h-50 items-center justify-center overflow-hidden bg-cover bg-center px-6"
+  style="background-image: url(/vivero-01.jpg);"
+>
+  <div class="absolute inset-0 bg-black/50"></div>
+  <div class="relative z-10 text-center">
+    <h1 class="text-3xl font-bold text-white sm:text-4xl">Sobre nosotros</h1>
+    <p class="mt-4 text-base text-slate-200 sm:text-lg md:text-xl">Somos un equipo comprometido y apasionado.</p>
+  </div>
+</div>
 
+<section class="mx-auto mb-20 max-w-4xl px-6 md:px-10">
+ 
   <div class="mt-12 flex flex-col gap-3">
     <h2 class="text-2xl font-bold text-gray-800 sm:text-3xl">
-      Impulsando el mundo con Astro.
+      Impulsando tu negocio con Altos del Caliboro.
     </h2>
     <p class="text-lg leading-relaxed text-slate-500">
       Somos un equipo multicultural de distintas partes del mundo. Venimos de

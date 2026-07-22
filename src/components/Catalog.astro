@@ -19,14 +19,14 @@ const catalog: ProductCategory[] = [
     title: "Papas & Tubérculos Seleccionados",
     description: "Higiene industrial y formatos listos para freír o cocer, sin perder un minuto en pelar.",
     products: [
-      { name: "Papa Lavada Calibrada (Grande)", format: "Saco 24.5 kg", netPrice: "$9.160", totalPrice: "$10.900", image: "/products/papas/papa-saco-01.jpg", featured: true },
+      { name: "Papa Lavada Calibrada (Grande)", format: "Saco 24.5 kg", netPrice: "$9.160", totalPrice: "$10.900", image: "/products/papas/papa-saco-01.png", featured: true },
       { name: "Papa Lavada Calibrada (Grande)", format: "Malla 5.0 kg", netPrice: "$2.450", totalPrice: "$2.916", image: "/products/papas/papa-saco-02.jpg" },
       { name: "Papa Lavada Calibrada (Grande)", format: "Malla 2.5 kg", netPrice: "$1.250", totalPrice: "$1.488", image: "/products/papas/papa-saco-03.jpg" },
       { name: "Papa Lavada Calibrada (Mediana)", format: "Malla 5.0 kg", netPrice: "$2.450", totalPrice: "$2.916", image: "/products/papas/papa-saco-04.jpg" },
       { name: "Papa Lavada Calibrada (Mediana)", format: "Malla 2.5 kg", netPrice: "$2.450", totalPrice: "$1.488", image: "/products/papas/papa-saco-04.jpg" },
       { name: "Papa Lavada Calibrada (Pequeña)", format: "Malla 2.0 kg", netPrice: "$1.420", totalPrice: "$1.690", image: "/products/papas/papa-saco-04.jpg" },
       { name: "Papa Pelada Entera (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.220", totalPrice: "$1.452", image: "/products/papas/papa-entera.jpg" },
-      { name: "Papa Pelada Bastón (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.220", totalPrice: "$1.452", image: "/products/papas/papa-baston.jpg" },
+      { name: "Papa Pelada Bastón (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.220", totalPrice: "$1.452", image: "/products/papas/papa-baston.jpg",featured: true  },
     ],
   },
   {
@@ -45,47 +45,47 @@ const catalog: ProductCategory[] = [
     products: [
       { name: "Beterraga con Piel", format: "Malla 1.0 kg", netPrice: "$950", totalPrice: "$1.131", image: "/products/betarragas/betarraga-01.jpg" },
       { name: "Beterraga Pelada Entera (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.130", totalPrice: "$1.345", image: "/products/betarragas/betarraga-02.jpg" },
-      { name: "Beterraga Pelada Picada (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.500", totalPrice: "$1.785", image: "/products/betarragas/betarraga-03.jpg" },
+      { name: "Beterraga Pelada Picada (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$1.500", totalPrice: "$1.785", image: "/products/betarragas/betarraga-03.jpg",featured: true  },
     ]
   },
   {
     title: "Verduras Frescas & Sanitizadas",
     description: "Hojas y hortalizas crujientes, lavadas profesionalmente y selladas para asegurar inocuidad total.",
     products: [
-      { name: "Acelga Fresca Sanitizada", format: "Bolsa 0.5 kg", netPrice: "$550", totalPrice: "$655", image: "/images/catalog/acelga.jpg" },
-      { name: "Cilantro Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$600", totalPrice: "$714", image: "/images/catalog/cilantro.jpg" },
-      { name: "Perejil Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$700", totalPrice: "$833", image: "/images/catalog/perejil.jpg" },
-      { name: "Puerro Fresco", format: "Bolsa 3 unidades", netPrice: "$1.300", totalPrice: "$1.547", image: "/images/catalog/puerro.jpg" },
-      { name: "Cebollín Fresco", format: "Bolsa 4 unidades", netPrice: "$1.500", totalPrice: "$1.785", image: "/images/catalog/cebollin.jpg" },
-      { name: "Rabanito sin Hojas (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$1.000", totalPrice: "$1.190", image: "/images/catalog/rabanito.jpg" },
+      { name: "Acelga Fresca Sanitizada", format: "Bolsa 0.5 kg", netPrice: "$550", totalPrice: "$655", image: "/products/verduras/acelga-01.jpg" },
+      { name: "Cilantro Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$600", totalPrice: "$714", image: "/products/verduras/cilantro-01.jpg", featured: true },
+      { name: "Perejil Fresco Sanitizado", format: "Bolsa 0.25 kg", netPrice: "$700", totalPrice: "$833", image: "/products/verduras/perejil-01.jpg", featured: true },
+      { name: "Puerro Fresco", format: "Bolsa 3 unidades", netPrice: "$1.300", totalPrice: "$1.547", image: "/products/verduras/puerro-01.jpg" },
+      { name: "Cebollín Fresco", format: "Bolsa 4 unidades", netPrice: "$1.500", totalPrice: "$1.785", image: "/products/verduras/cebollin-01.jpg" },
+      { name: "Rabanito sin Hojas (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$1.000", totalPrice: "$1.190", image: "/products/verduras/rabano-01.jpg" },
     ],
   },
   {
     title: "Zapallos de Alta Eficiencia",
     description: "Olvídate de la dureza del zapallo: formatos listos para la olla.",
     products: [
-      { name: "Zapallo Entero Híbrido", format: "Por kilo, ~4.0 kg", netPrice: "$600", totalPrice: "$714", image: "/images/catalog/zapallo-entero.jpg" },
-      { name: "Zapallo Porcionado c/ Cáscara (Al vacío)", format: "Por kilo, 1.0 kg", netPrice: "$950", totalPrice: "$1.131", image: "/images/catalog/zapallo-con-cascara.jpg" },
-      { name: "Zapallo Porcionado s/ Cáscara (Al vacío)", format: "Por kilo, 1.0 kg", netPrice: "$1.000", totalPrice: "$1.190", image: "/images/catalog/zapallo-sin-cascara.jpg" },
+      { name: "Zapallo Entero Híbrido", format: "Por kilo, ~4.0 kg", netPrice: "$600", totalPrice: "$714", image: "/products/zapallos/zapallo.jpg" },
+      { name: "Zapallo Porcionado c/ Cáscara (Al vacío)", format: "Por kilo, 1.0 kg", netPrice: "$950", totalPrice: "$1.131", image: "/products/zapallos/zapallo-02.jpg" },
+      { name: "Zapallo Porcionado s/ Cáscara (Al vacío)", format: "Por kilo, 1.0 kg", netPrice: "$1.000", totalPrice: "$1.190", image: "/products/zapallos/zapallo-03.jpg", featured: true },
     ],
   },
   {
     title: "Zanahorias Procesadas",
     description: "Cortes listos para cocinar, sin tiempo perdido en pelar ni picar.",
     products: [
-      { name: "Zanahoria con Cáscara", format: "Bolsa 1.0 kg", netPrice: "$700", totalPrice: "$833", image: "/images/catalog/zanahoria-con-cascara.jpg" },
-      { name: "Zanahoria sin Cáscara (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$900", totalPrice: "$1.071", image: "/images/catalog/zanahoria-sin-cascara.jpg" },
-      { name: "Zanahoria Corte Bastón (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$900", totalPrice: "$1.071", image: "/images/catalog/zanahoria-baston.jpg" },
-      { name: "Zanahoria Corte Cubo / Rodajas (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$900", totalPrice: "$1.071", image: "/images/catalog/zanahoria-cubo.jpg" },
+      { name: "Zanahoria con Cáscara", format: "Bolsa 1.0 kg", netPrice: "$700", totalPrice: "$833", image: "/products/zanahorias/zana-01.jpg" },
+      { name: "Zanahoria sin Cáscara (Al vacío)", format: "Bolsa 1.0 kg", netPrice: "$900", totalPrice: "$1.071", image: "/products/zanahorias/zana-02.jpg" },
+      { name: "Zanahoria Corte Bastón (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$900", totalPrice: "$1.071", image: "/products/zanahorias/zana-03.jpg", featured: true },
+      { name: "Zanahoria Corte Cubo / Rodajas (Al vacío)", format: "Bolsa 0.5 kg", netPrice: "$900", totalPrice: "$1.071", image: "/products/zanahorias/zana-04.jpg", featured: true },
     ],
   },
   {
     title: "Cítricos Seleccionados",
     description: "Ideales para aderezos y barras de coctelería.",
     products: [
-      { name: "Limón en Malla", format: "Malla 10 kg", netPrice: "$8.000", totalPrice: "$9.520", image: "/images/catalog/limon.jpg" },
-      { name: "Mandarina en Malla", format: "Malla 2.0 kg", netPrice: "$1.600", totalPrice: "$1.904", image: "/images/catalog/mandarina.jpg" },
-      { name: "Naranja en Malla", format: "Malla 2.0 kg", netPrice: "$1.600", totalPrice: "$1.904", image: "/images/catalog/naranja.jpg" },
+      { name: "Limón en Malla", format: "Malla 10 kg", netPrice: "$8.000", totalPrice: "$9.520", image: "/products/citricos/limon.jpg", featured: true },
+      { name: "Mandarina en Malla", format: "Malla 2.0 kg", netPrice: "$1.600", totalPrice: "$1.904", image: "/products/citricos/mandarina.jpg" },
+      { name: "Naranja en Malla", format: "Malla 2.0 kg", netPrice: "$1.600", totalPrice: "$1.904", image: "/products/citricos/naranja.jpg" },
     ],
   },
 ];
@@ -107,7 +107,7 @@ const catalog: ProductCategory[] = [
 <section class="px-6 py-4 md:px-10">
   {catalog.map((category) => (
     <div class="mt-16 first:mt-2">
-      <h2 class="text-2xl font-bold bg-linear-to-r from-black via-green-700 via-40% to-green-500 bg-clip-text text-transparent">{category.title}</h2>
+      <h2 class="inline-block text-2xl font-bold bg-linear-to-r from-black via-green-700 via-30% to-green-500 bg-clip-text text-transparent">{category.title}</h2>
       <p class="mt-2 max-w-2xl text-slate-500">{category.description}</p>
 
       <div class="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-8 lg:grid-cols-4">
