@@ -1,14 +1,7 @@
 ---
-interface TeamMember {
-  name: string;
-  role: string;
-  avatar: string;
-}
-
-const teamMembers: TeamMember[] = [
-  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member1.jpg" },
-  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member2.jpg" },
-  { name: "Nombre Apellido", role: "Cargo", avatar: "/images/team/member3.jpg" },
+const images: string[] = [
+  "/about-02.png",
+  "/about-01.png",
 ];
 ---
 
@@ -24,34 +17,29 @@ const teamMembers: TeamMember[] = [
 </div>
 
 <section class="mx-auto mb-20 max-w-4xl px-6 md:px-10">
- 
+
   <div class="mt-12 flex flex-col gap-3">
-    <h2 class="text-2xl font-bold text-gray-800 sm:text-3xl">
+    <h2 class="text-2xl sm:text-3xl font-bold bg-linear-to-r from-black via-green-700 via-40% to-green-500 bg-clip-text text-transparent">
       Impulsando tu negocio con Altos del Caliboro.
     </h2>
     <p class="text-lg leading-relaxed text-slate-500">
-      Somos un equipo multicultural de distintas partes del mundo. Venimos de
-      trasfondos diversos, aportando personalidades, experiencias y
-      habilidades distintas al trabajo. Esto es lo que hace especial a
-      nuestro equipo.
+      Somos un equipo unido por la pasión y el compromiso con 
+      nuestra tierra y con quienes viven en ella. Nuestra mision es entregar productos frescos 
+      y de calidad cultivados en nuestro propio entorno. Valoramos el esfuerzo, la dedicación 
+      el trabajo de nuestro equipo.
+    </p>
+    <p class="text-lg font-bold sm:text-lg bg-linear-to-r from-black via-green-700 via-40% to-green-500 bg-clip-text text-transparent">
+      ¡¡ Juntos trabajamos para llevar lo mejor de nuestra producción directamente a tu cocina !!
     </p>
   </div>
 
-  <div class="mt-12 grid gap-10 sm:grid-cols-2 md:grid-cols-3">
-    {teamMembers.map((member) => (
-      <div class="group">
-        <div class="aspect-square w-full overflow-hidden rounded-md bg-gray-100">
-          <img
-            src={member.avatar}
-            alt={member.name}
-            class="h-full w-full object-cover transition group-hover:-translate-y-1 group-hover:shadow-xl"
-          />
-        </div>
-        <div class="mt-4 text-center">
-          <h3 class="text-lg text-gray-800">{member.name}</h3>
-          <p class="text-sm text-slate-500">{member.role}</p>
-        </div>
-      </div>
+  <div class="mt-12 font-bold grid grid-cols-1 gap-6">
+    {images.map((image) => (
+      <img
+        src={image}
+        alt="Altos del Caliboro"
+        class="aspect-video w-full rounded-md object-cover shadow-md"
+      />
     ))}
   </div>
 </section>
